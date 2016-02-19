@@ -1,3 +1,17 @@
+##2016-02-19
+
+Q: 华为术语：IR
+A: Initial Requirement 初始需求
+
+Q: 华为术语：SR
+A: System Requirement 系统需求
+
+Q: 华为术语：AR
+A: Allocation Requirement 分配需求
+
+Q: IP:intellectual property
+A: 知识产权 版权
+
 ##2016-02-18
 
 Q: All four platforms discussed in this book
