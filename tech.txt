@@ -1,0 +1,286 @@
+----------------------------------------------
+
+##2016-03-13
+
+Q: Python的哪个内置函数能获取数字的绝对值？
+A: abs(x) 
+A: * 返回参数的绝对值，参数可以是整数或浮点数
+
+Q: Python的内置函数all是什么意思？
+A: `all(iterable)` 
+A: * 参数是可迭代对象，如果iterable里的元素都是
+A: True的或者iterable是空的，那么就返回True
+
+Q: Python的内置函数any是什么意思？
+A: `any(iterable)` 
+A: * 参数是可迭代对象，如果iterable里有一个元素是
+A: True的，那么就返回True，如果iterable是空的就返回False
+
+Q: Python哪个内置函数能得到数字的二进制字符串？
+A: `bin(x)` 
+A: * 参数是int，把x转换成二进制表示的字符串，开头是`0b`
+
+Q: Python哪个内置函数能得到数字的16进制字符串？
+A: `hex(x)`
+A: * 参数是int，把x转换成16进制表示的字符串，开头是`0x`
+
+Q: Python里哪个内置函数能按照指定进制转换数字？
+A: `int(x, base=10)` 
+A: * 将x转换成int，x可以是数字或字符串，可以指定进制
+
+Q: Python里如何获得序列或字符串的长度？
+A: `len(s)` 
+A: * 返回s的长度，s可以是sequence或collection
+
+Q: Python里的print函数怎么用？ 
+A: `print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)` 
+A: * 打印或向流里写入，sep是各个object之间的分割字串，
+A: end是最后的换行符，file是流，flush是是否立即刷新流
+
+Q: Python里的内置函数range怎么用？
+A: `range(start, stop, step)` 
+A: * 返回一个[start, stop)的数字序列，一般在for循环里用
+
+Q: Python里如何反向遍历序列?
+A: `reversed(seq)` 
+A: * 返回一个迭代器，来逆向遍历序列seq
+
+Q: vim里的命令行命令global命令是什么意思？怎么用？
+A: :[range]global/{pattern}/[cmd]
+A: 在range范围内所有匹配{pattern}(就是搜索到的意思)的行都
+A: 执行cmd命令，比如：
+A: :%global/html/d
+A: 就是把所有包含html的行都删掉
+A: 另外vglobal就是对不匹配{pattern}的行执行命令
+
+Q: vim里range中取值为0是什么意思？
+A: 就是第一行的前面，比如move命令，move到0行其实就是move到
+A: 首行
+
+Q: vim里的range可不可以用{pattern}来指定？
+A: 可以range可以像这样`/html/,/\/html/`来指定范围，意思就是
+A: 被html标签包围的那些行
+
+Q: vim里如何重复上一次的命令行命令？
+A: 普通模式下`@:`就能重复上一次的命令行命令
+A: `@@`可以重复执行上一次执行的寄存器里的命令，也就是执行过
+A: `@:`后，就可以用`@@`来重复执行了，`@@`还可以重复上一次执行
+A: 过的宏，record
+
+Q: vim里命令行下输入了一部分字符如何显示所有的补全选项？或者是
+Q: 显示当前这个命令所有可用的参数？
+A: <C-d>快捷键可以显示所有的补全选项。
+
+Q: vim里命令行下如何快速输入原来光标下的单词？
+A: <C-r><C-w>可以输入光标下的单词
+A: <C-r><C-a>可以输入光标下的字串
+
+Q: vim如何设置可以命令历史记录的长度？
+A: :set history=200
+
+Q: vim里的命令行窗口是什么？如何打开？
+A: 命令行窗口就是在下面打开一个命令行历史记录的窗口，在里面可以
+A: 使用vim的各种快捷键进行编辑，并能执行，有3种打开命令行窗口的方法：
+A: 1. 普通模式下：q:
+A: 2. 普通模式下：q/
+A: 3. 命令行模式下切换到命令行窗口：<C-f>
+
+Q: vim里如何打开一个shell窗口？
+A: :shell
+A: 要关闭的话就输入exit
+
+Q: vim里如何获取获取一个shell命令的输出并填入到当前文档里？
+A: :read !{cmd}
+A: 将cmd的输出插入到当前光标下
+
+Q: vim里如何把一些文本当做某个shell命令的输入来执行那个shell命令？
+A: :[range]write !{cmd}
+A: 将range范围内的文本作为cmd的输入执行
+A: 一个比较实用的技巧如下：
+A: :[range]write !shell
+A: 可以在vim里预先编辑好命令，然后批量执行，比如批量改名这样
+
+Q: vim里如何调用外部的shell命令处理文本并把那些文本替换成shell命令的结果？
+A: :[range]!{cmd}
+A: 比如调用外部的sort命令来给文本排序
+A: :[range]!sort
+
+##2016-03-13
+
+Q: Python如何查看某个变量是什么类型？
+A: print(type(variant))
+
+Q: vim技巧：如何对每行的文本列数进行限制？
+A: :set textwidth=列数
+A: :set formatoptions+=m
+
+Q: linux中c++里如何获取自己的进程ID？
+A: pid_t getpid(void)
+
+Q: linux中c++里如何获取自己父进程ID？
+A: pid_t getppid(void)
+
+Q: linux中c++如何获取自己的userID？
+A: pid_t getuid(void)
+
+Q: linux里c++中如何获取自己的groupID？
+A: pid_t getgid(void)
+
+Q: c++中类的普通成员函数对类的大小(sizeof)有没有影响？
+Q: 没有影响。普通成员函数不会占存储空间，虚函数才会占
+
+##2016-03-11
+
+Q: Python中如何打开文件?
+A: open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+A: 返回一个文件对象，后续对这个文件对象进行读写操
+A: 作，必须提供文件名，包含路径的
+
+Q: Python中的文件打开函数open里的mode参数是什么意思？
+A: mode是模式的意思，表示用什么模式打开文件，有
+A: 下面几种模式
+A: "r":读模式
+A: "w":写模式
+A: "a":添加模式
+A: "b":二进制模式，可以和其他模式放一起
+A: "+":读/写模式
+
+Q: Python中的文件打开函数open里的buffering参数是什么意思？
+A: 缓冲
+A: 值为0表示无缓冲，直接对硬盘进行读写，
+A: 值为1表示有缓冲，会用内存代替硬盘，只有在调用flush或
+A: close时才会写入硬盘，
+A: 值大于1表示使用缓冲区的大小，
+A: 值小于0表示用默认的缓冲区大小
+
+Q: Python中的文件打开函数open的编码参数的默认值是什么？
+A: encoding: 默认是`locale.getpreferredencoding(False)`的返回值
+
+Q: Python支持哪些编码方式，这个要到哪里去查看？
+A: 到模块codecs里可以看到。
+
+Q: Python读写文件时遇到编码错误怎么处理？
+A: 在用open函数打开文件时可以用errors参数指定编码解码错误时的处理
+A: 方式，有下面几种取值：
+A: 'strict': 默认值，会引发一个`ValueError`的异常
+A: 'ignore': 会忽略这个错误，继续编码或解码，这会导致数据的丢失
+A: 'replace': 会用一个替换字符(比如?）来代替畸形的字符
+
+Q: Python里怎么获取当前系统的换行符？
+A: os.linesep就是当前系统默认的换行符。
+
+Q: Python里从流里读取写入数据时换行符怎么处理的(open函数)？
+A: open函数里有一个参数newline
+A: * newline: 规定了换行符怎么处理，有None, '', '\n', '\r', and '\r\n'这些取值
+A:       * 从流里读取数据时
+A:           * newline为None: 流里的各种换行符都会换成'\n'返回给调用者
+A:           * newline为'': 流里的换行符不会进行转换，直接把原始值返回给调用者
+A:           * newline为其他有效值: 会以newline作为分割行的标志，并且把换行符的原始值给调用者
+A:       * 向流里写入数据时
+A:           * newline为None: '\n'会转换成系统换行符`os.linesep`写入流
+A:           * newline为''或'\n': '\n'不会有转换
+A:           * newline为其他有效值: '\n'会转换成newline写入到流里
+A:       * '': 返回给调用者
+
+Q: Python读取文本文件的函数是什么？三个
+A: f.read(size) 
+A:       * 读取数据，返回一个str，最多读取size这么多的数据，如果没有
+A:       size或size为负数，那么就读到EOF 
+A: f.readline(size = -1) 
+A:       * 读取一行数据，并且会携带换行符，返回一个str，如果设置了size，
+A:       那么最多会返回size长度的数据 
+A: f.readlines(hint=-1) 
+A:       * 读取多行数据，返回一个字符串的list，如果读入的行包含的字符数
+A:       超过参数hint，就不再读取新的行
+
+Q: Python向文本文件写入的函数是什么？两个
+A: f.write(s) 
+A:       * 将str写入文件，换行符要自己加到字符串里 
+A: f.writelines(lines) 
+A:       * 参数是字符串的list，将list里的行都写入文件，但需要自己加换行符
+
+Q: Python中的语句:`with open("example.txt") as f:`有什么特别的作用?
+A: 用with语句打开文件，就不用自己去关闭文件了，即使遇到异常时，
+A: 文件也会保证关闭的。
+
+Q: 炉石传说机制:战吼(Battlecry)的效果是什么？
+A: 一出牌就立即触发效果
+
+Q: 炉石传说机制:冲锋(Charge)的效果是什么？
+A: 出牌后即可立即攻击。在炉石传说中，一般被召唤出的仆从必须
+A: 等待下一轮才能进行攻击，而具有冲锋技能可无视此规则
+
+Q: 炉石传说机制:抉择(Choose)的效果是什么？
+A: 顾名思义。一般是2选1
+
+Q: 炉石传说机制:连击(Combo)的效果是什么？
+A: 只要具有连击效果的卡牌不是本轮第一张打出的，那么即可触发
+A: 连击效果。换句话说就是先出一张其他的牌，再出拥有连击效果
+A: 的牌，即可成功触发
+
+Q: 炉石传说机制:亡语(Deathrattle)的效果是什么？
+A: 仆从被杀死时触发效果，又称临死一击
+A: rattle /'ræt(ə)l/ noun
+A: a series of short loud sounds made when hard objects hit
+A: against each other
+A: 一连串短促尖厉的撞击声；咔嗒声
+
+Q: 炉石传说机制:圣盾(Divine Shield)的效果是什么？
+A: 可以遭受一次伤害而不掉血
+A: devine adj.
+A: [usually before noun] coming from or connected with God or
+A: a god
+A: 天赐的；上帝的；神的
+
+Q: 炉石传说机制:激励(Enrage)的效果是什么？
+A: 如果这张牌不是满血的话，则触发激励效果
+A: enrage /ɪn'reɪdʒ/ verb
+A: [usually passive] to make sb very angry
+A: 使异常愤怒；激怒；触怒
+
+Q: 炉石传说机制:冰冻(Freeze)的效果是什么？
+A: 被冰冻的目标下一轮将无法行动
+
+Q: 炉石传说机制:过载(Overload)的效果是什么？
+A: 下一轮将减少X颗法力水晶。X为过载后接的具体数值。比如一张卡
+A: 牌拥有过载:(2)，那么下一轮你会自动减少2颗法力水晶
+
+Q: 炉石传说机制:奥秘(Secret)的效果是什么？
+A: 不同的奥秘拥有不同的触发条件和触发效果，但你的对手却无法看
+A: 到具体是哪一种奥秘。因此对手的行动可能会触发奥秘效果，也可
+A: 能不触发。比如猎人的毒蛇陷阱拥有奥秘：当你的仆从受到攻击时，
+A: 召唤三只1/1的蛇。也就是说如果对手选择攻击你的仆从，那么这
+A: 张奥秘卡就会召唤出三只1/1的蛇;但对手如果没有攻击你的仆从，
+A: 那么这个奥秘效果就不会触发
+
+Q: 炉石传说机制:沉默(Silence)的效果是什么？
+A: 移除目标的所有buff和效果(包括卡牌效果)，变成“空白”卡
+
+Q: 炉石传说机制:潜行(Stealth)的效果是什么？
+A: 潜行中的仆从无法被对方选中，也无法成为攻击、法术或者其他技能
+A: 的目标。而一旦该仆从行动，则自动取消潜行效果
+
+Q: 炉石传说机制:法术伤害(Spell Power)的效果是什么？
+A: 法术伤害后接一个具体数值X。也就是攻击和法术攻击时会造成额外X点伤害
+
+Q: 炉石传说机制:召唤(Summon)的效果是什么？
+A: 顾名思义，召唤宠物或者别的仆从
+A: summon /'sʌmən/ verb
+A: ~ sb (to sth)(formal) to order sb to come to you
+A: 召唤
+
+Q: 炉石传说机制:嘲讽(Taunt)的效果是什么？
+A: 对方只能攻击施放了嘲讽的目标，只有将其杀死后才能选择攻击其他目标
+A: taunt /tɔːnt/ verb.
+A: to try to make sb angry or upset by saying unkind things about 
+A: them, laughing at their failures, etc.
+A: 辱骂；嘲笑；讽刺；奚落
+
+Q: 炉石传说机制:变形(Transform)的效果是什么？
+A: 将目标变形为其他生物。需要注意的是变形这个过程是不可逆的，比如变
+A: 羊之后就别想再变回来了
+
+Q: 炉石传说机制:风怒(Windfury)的效果是什么？
+A: 拥有风怒的仆从每轮可攻击2次
+A: 要关闭的话就输入exit
+
