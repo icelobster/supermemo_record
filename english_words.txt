@@ -1,3 +1,22 @@
+---------------------------------------------
+##2016-03-14
+Q: A specific handler used for *rendering* HTML.
+A: 用来翻译成HTML语言的一个特殊的处理器。
+A: render /'rendə/ verb.
+A: ~ sth (as sth) | ~ sth (into sth) to express sth
+A: in a different language
+A: （用不同的语言）表达；翻译；把···译成
+
+Q: It's a concept that is difficult to render into
+Q: English.
+A: 这个概念难以用英语来表达。
+Q: A specific handler used for *rendering* HTML.
+A: 用来翻译成HTML语言的一个特殊的处理器。
+A: render /'rendə/ verb.
+A: ~ sth (as sth) | ~ sth (into sth) to express sth
+A: in a different language
+A: （用不同的语言）表达；翻译；把···译成
+
 Q: subtract /səb'trækt/ verb
 A: ~ sth (from sth)to make a number or an amount away from
 A: another number or amount
